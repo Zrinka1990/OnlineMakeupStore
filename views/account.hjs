@@ -1,0 +1,85 @@
+<html>
+	<head>
+		<link rel="stylesheet" type="text/css" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css">
+		<link rel="stylesheet" type="text/css" href="css/style.css">
+	</head>
+
+	<body>
+		<div class="container">
+			<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+				<a class="navbar-brand" href="#">Online Makuep Store</a>
+				<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+					<span class="navbar-toggler-icon"></span>
+				</button>
+				<div class="collapse navbar-collapse" id="navbarNav">
+					<ul class="navbar-nav">
+						<li class="nav-item">
+							<a class="nav-link" href="/">Home <span class="sr-onOnline Makuep Storely"></span></a>
+						</li>
+						<li class="nav-item">
+							<a class="nav-link" href="/account">Account</a>
+						</li>
+						<li class="nav-item">
+							<a class="nav-link" href="/admin">Admin</a>
+						</li>
+						<li class="nav-item">
+							<a class="nav-link" href="/account/logout">Logout</a>
+						</li>
+					</ul>
+				</div>
+			</nav>
+		</div>
+
+		<div class="container pt-5">
+			<h3>Welcome {{user.email}}</h3>
+	
+			<div class="container">
+			<div class="row pt-4">
+				<div class="col-md-7">
+					<h3>Items For Sale</h3>
+								
+			 			{{#items}}							 		
+							<div class="item mt-5 row">
+								<div class="col-md-2 col-sm-12">
+									<img src="/images/makeup.png" class="mr-2" />
+								</div>
+								<div class="col-md-8">
+								<b> {{name}} € {{price}} </b> <br />
+								<p class="pt-2">{{description}}</p>
+								</div>	
+								<div class="col-md-2">
+									<a class="btn btn-info mt-2"
+										href="/account/additem/{{id}}">Add</a>
+								</div>			
+							</div>									
+						{{/items}}	 		
+				</div>
+
+				<div class="col-1"></div>
+
+				<div class="col-md-4">
+					<h3>My Items</h3>
+
+					{{#interested}}
+						<div class="item mt-5 row">
+							<div class="col-4">
+								<img src="/images/makeup.png" />
+							</div>
+							<div class="col-4">
+								<b>{{name}}</b> <br /> <b>€ {{price}} </b>
+							</div>
+							<div class="col-4">
+								<a class="btn btn-danger mt-2"
+									href="/account/removeitem/{{id}}">Remove</a>
+							</div>
+																				
+						</div>
+					{{/interested}}
+				</div>
+			</div>
+			</div>
+		</div>
+
+
+	</body>
+</html>

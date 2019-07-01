@@ -1,0 +1,11 @@
+.item {
+    padding: 12px;
+    background: #fbeaeb;
+    border: 1px solid #ddd;
+    margin-bottom: 24px
+}
+
+img {
+    width: auto;
+    height: 90px;
+}

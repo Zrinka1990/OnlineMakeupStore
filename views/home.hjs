@@ -1,0 +1,74 @@
+<html>
+	<head>
+		<link rel="stylesheet" type="text/css" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css">
+	</head>
+
+	<body>
+		<div class="container">
+
+			<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+				<a class="navbar-brand" href="#">Online Makuep Store</a>
+				<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+					<span class="navbar-toggler-icon"></span>
+				</button>
+				<div class="collapse navbar-collapse" id="navbarNav">
+					<ul class="navbar-nav">
+						<li class="nav-item">
+							<a class="nav-link" href="/">Home <span class="sr-onOnline Makuep Storely"></span></a>
+						</li>
+						<li class="nav-item">
+							<a class="nav-link" href="/account">Account</a>
+						</li>
+						<li class="nav-item">
+							<a class="nav-link" href="/admin">Admin</a>
+						</li>
+						<li class="nav-item">
+							<a class="nav-link" href="/account/logout">Logout</a>
+						</li>
+					</ul>
+				</div>
+			</nav>
+			
+		</div>
+
+		<div class="container">
+			<div class="jumbotron alert-danger">
+				<h1>Online Makuep Store</h1>
+				<p>The best makup products</p>
+			</div>
+	
+			<div class="d-flex justify-content-center">
+				<form action="/register" method="post">
+					<h4>Register</h4>
+					<input type="text" name="email" placeholder="Email" /><br />
+					<input type="password" name="password" placeholder="Password" /><br />
+					<span class="d-flex justify-content-center">
+						<input type="submit" class="btn btn-info mt-2" value="Sign Up" />
+					</span>		
+				</form>
+			</div>
+			
+			<div class="d-flex justify-content-center">
+				<form action="/login" method="post">
+					<h4>Login</h4>
+					<input type="text" name="email" placeholder="Email" /><br />
+					<input type="password" name="password" placeholder="Password" /><br />
+					<span class="d-flex justify-content-center">
+						<input type="submit" class="btn btn-info mt-2" value="Log In" />
+					</span>
+				</form>
+			</div>
+
+			<div class="d-flex justify-content-center">
+				<form action="/account/resetpassword" method="POST">
+					<h4>Forgot password?</h4>
+					<input type="text" name="email" placeholder="Enter your email"/> <br />
+					<span class="d-flex justify-content-center">
+						<input type="submit" class="btn btn-info mt-2" value="Submit" />
+					</span>
+				</form>
+			</div>
+			
+		</div>
+	</body>
+</html>
